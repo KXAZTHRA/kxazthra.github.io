@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let corrects = document.querySelectorAll('.correct');
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+                        corrects[i].style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = 'CORRECT!';
+                    });
+                }
+
+                let wrongs = document.querySelectorAll('.wrong');
+                    for (let i = 0; i < wrongs.length; i++)
+                    {
+                        wrongs[i].addEventListener('click', function() {
+                            wrongs[i].style.backgroundColor = 'red';
+                            document.querySelector('#feedback1').innerHTML = 'WRONG!';
+                        });
+                    }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'kirk' || input.value === 'Kirk') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'CORRECT!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'WRONG!';
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                    <h3>Which city is the seafood capital of the Philippines?</h3>
+
+                    <button class="wrong">Baguio</button>
+                    <button class="wrong">Negros</button>
+                    <button class="wrong">Cavite</button>
+                    <button class="correct">Roxas</button>
+                    <button class="wrong">Manila</button>
+
+                <hr>
+                    <h3>Who is Alessandro?</h3>
+
+                    <button class="correct">A hard-working guy</button>
+                    <button class="correct">A monster-dog raiser</button>
+                    <button class="correct">A gym boi</button>
+                    <button class="correct">Kirk's friend</button>
+                    <button class="correct">A handsome Data scientist / cyberhacker / youtuber</button>
+
+                    <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who am I?</h3>
+                <input autocomplete="off" autofocus placeholder="Type" type="text">
+                <button id="check" type="submit">Check answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
