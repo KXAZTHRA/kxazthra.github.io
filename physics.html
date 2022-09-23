@@ -29,7 +29,7 @@
 
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
-                    if (input.value === 'kirk' || input.value === 'Kirk') {
+                    if (input.value === 'Galileo Galilei' || input.value === 'galileo galilei') {
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'CORRECT!';
                     }
@@ -52,22 +52,22 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
-                    <h3>Which city is the seafood capital of the Philippines?</h3>
+                    <h3>Convert 10^-6 micrometers to centimeters?</h3>
 
-                    <button class="wrong">Baguio</button>
-                    <button class="wrong">Negros</button>
-                    <button class="wrong">Cavite</button>
-                    <button class="correct">Roxas</button>
-                    <button class="wrong">Manila</button>
+                    <button class="wrong">10^4 centimeters</button>
+                    <button class="wrong">10^-5 centimeters</button>
+                    <button class="wrong">10^-9 centimeters</button>
+                    <button class="correct">10^-10 centimeters</button>
+                    <button class="wrong">10^-6 centimetes</button>
 
                 <hr>
-                    <h3>Who is Alessandro?</h3>
+                    <h3>Convert 2.4 x 10^-3 kilometers to milimeters?</h3>
 
-                    <button class="correct">A hard-working guy</button>
-                    <button class="correct">A monster-dog raiser</button>
-                    <button class="correct">A gym boi</button>
-                    <button class="correct">Kirk's friend</button>
-                    <button class="correct">A handsome Data scientist / cyberhacker / youtuber</button>
+                    <button class="wrong">2.4 x 10^-3 milimeters</button>
+                    <button class="correct">2.4 x 10^3 milimeters</button>
+                    <button class="wrong">2.4 milimeters</button>
+                    <button class="wrong">2.4 x 10^-1 milimeters</button>
+                    <button class="correct">2.4 x 10^6 milimeters</button>
 
                     <p id="feedback1"></p>
             </div>
@@ -76,7 +76,7 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                <h3>Who am I?</h3>
+                <h3>Who is the father of Science?</h3>
                 <input autocomplete="off" autofocus placeholder="Type" type="text">
                 <button id="check" type="submit">Check answer</button>
 
