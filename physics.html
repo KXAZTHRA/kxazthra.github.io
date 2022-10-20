@@ -32,7 +32,7 @@
 
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
-                    if (input.value === 'kirk' || input.value === 'Kirk') {
+                    if (input.value === 'kirk' || input.value === 'Kirk' || input.value === 'shania ver 2' || input.value === 'Shania ver 2' || input.value === 'ver 2') {
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'CORRECT!';
                     }
@@ -71,6 +71,12 @@
                     <button class="wrong">Alien</button>
                     <button class="wrong">Ido ko</button>
                     <button class="wrong">Basta tawo</button>
+                
+                <hr>
+                    <h3>Crush ni Princess Mondragon si Ched?</h3>
+
+                    <button class="wrong">Indi</button>
+                    <button class="correct">Huod</button>
 
                     <p id="feedback1"></p>
             </div>
@@ -82,7 +88,6 @@
                 <h3>Sin o daya?</h3>
                 <input autocomplete="off" autofocus placeholder="Type" type="text">
                 <button id="check" type="submit">Check answer</button>
-
                 <p id="feedback2"></p>
             </div>
         </div>
